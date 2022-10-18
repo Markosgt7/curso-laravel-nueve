@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Datos del usuario</h1>
-    <p>{{ $user->name }}</p>
+
 </body>
 </html>

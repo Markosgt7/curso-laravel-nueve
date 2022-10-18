@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Dashboard\PostController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,8 @@ use App\Http\Controllers\TestController;
 |
 */
 
+Route::get('/',function(){
+    return view('welcome');
+});
+Route::resource('post', PostController::class);
 
