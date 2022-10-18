@@ -10,4 +10,7 @@ class TestController extends Controller
         $user= User::find(1);
         return view('welcome',['user'=>$user]);
     }
+    public function index(){
+        return view("test.index");
+    }
 }

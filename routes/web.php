@@ -14,4 +14,4 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/',[TestController::class,'test']);
+Route::get('/',[TestController::class,'index']);
