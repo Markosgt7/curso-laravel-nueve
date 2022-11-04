@@ -18,7 +18,7 @@
     </label>
     <label for="category">Categoría
         <select name="category_id">
-            <option value="0">Seleccione</option>
+            <option value="uno">Seleccione</option>
             @foreach ($categories as $title=>$id)
                 <option value="{{$id}}">{{ $title }}</option>
             @endforeach
