@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Crear post</h1>
+      @include('dashboard.fragment._errors-form')
     <form action="{{ route('post.store')}}" method="post">
     @csrf
     <label for="title">Título

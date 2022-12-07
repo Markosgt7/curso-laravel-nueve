@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories= Category::pluck('id','title');
+        $categories= Category::pluck('id','title');//permite elegir solo los datos sin tanto detalle
         return view('dashboard.post.create',compact('categories'));
     }
 
@@ -41,6 +41,7 @@ class PostController extends Controller
     {
         $data = array_merge($request->all(),['image'=>'']);
         Post::create($data);
+        return view('welcome');
     }
     
 
