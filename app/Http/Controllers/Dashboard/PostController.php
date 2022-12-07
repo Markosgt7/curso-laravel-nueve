@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Http\Requests\Post\StoreRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -39,7 +40,7 @@ class PostController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $data = array_merge($request->all(),['image'=>'']);
+        $data = array_merge($request->all());
         Post::create($data);
         return view('welcome');
     }
