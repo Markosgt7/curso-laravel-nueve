@@ -56,7 +56,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        echo "Show";
     }
 
     /**
@@ -90,6 +90,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        echo "Destroy";
     }
 }
