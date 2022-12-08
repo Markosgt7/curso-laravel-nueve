@@ -20,6 +20,7 @@ class PostController extends Controller
      */
     public function index()
     {
+        
         $posts = Post::paginate(2);
         return view('dashboard.post.index', compact('posts'));
     }
@@ -46,7 +47,7 @@ class PostController extends Controller
     {
         $data = array_merge($request->all());
         Post::create($data);
-        return view('welcome');
+        return to_route("post.index");
     }
     
 
@@ -83,6 +84,7 @@ class PostController extends Controller
     public function update(PutRequest $request, Post $post)
     {
         $post->update($request->validated());
+        return to_route("post.index");
     }
 
     /**
@@ -94,5 +96,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         echo "Destroy";
+        return to_route("post.index");
     }
 }
