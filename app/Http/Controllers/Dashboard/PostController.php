@@ -8,6 +8,7 @@ use App\Http\Requests\Post\StoreRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class PostController extends Controller
 {
@@ -18,7 +19,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        echo "Metodo Index";
+        $posts = Post::get();
+        return view('dashboard.post.index', compact('posts'));
     }
 
     /**
